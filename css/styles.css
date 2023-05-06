@@ -352,6 +352,72 @@ img {
 }
 
 
+.subscrabe{
+    margin-left: 80px;
+}
+
+.subscrabe-text{
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    letter-spacing: 0.02em;
+
+    color: var(--primary-inverted-text-clr);
+}
+
+.footer-input{
+    width: 254px;
+    height: 40px;
+
+    padding: 8px 16px;
+
+    border: 1px solid var(--primary-inverted-bg-clr);
+    border-radius: 4px;
+
+    background-color: var(--footer-bg-clr);
+}
+
+.footer-input::placeholder{
+    color: var(--primary-inverted-text-clr);
+}
+
+.subscrabe-btn{
+    display: inline-flex;
+    margin-left: 24px;
+    align-items: center;
+    justify-content: center;
+
+    width: 165px;
+    height: 40px;
+
+    border: none;
+    border-radius: var(--primary-border-radius);
+
+    color: var(--primary-inverted-text-clr);
+    background-color: var(--primary-brand-clr);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscrabe-btn:hover, .subscrabe-btn:focus{
+    background-color: var(--primary-focus-hover-clr);
+}
+
+.subscrabe-btn::after{
+    content: '';
+    display: block;
+    margin-left: 16px;
+
+    width: 24px;
+    height: 20px;
+    background-image: url('../images/icons.svg#icon-telegram');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 
 /* Hero */
 .hero {
@@ -837,6 +903,11 @@ img {
 }
 
 .modal{
+
+    padding-top: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -876,4 +947,61 @@ img {
 .modal-close-btn:hover, .modal-close-btn:focus{
     fill: var(--primary-inverted-text-clr);
     background-color: var(--primary-focus-hover-clr);
+}
+
+.modal-text{
+    margin-bottom: 16px;
+
+    font-weight: 500;
+    font-size: var(--primary-font-size);
+    line-height: var(--primary-line-height);
+    
+    text-align: center;
+    letter-spacing: 0.02em;    
+
+    color: var(--primary-text-dark-clr);
+}
+
+.application{
+
+}
+
+.application-lable{
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 14px;
+    
+    letter-spacing: 0.04em;
+
+    color: var(--subtle-text-clr);
+}
+
+.application-input{
+display: flex;
+flex-direction: column;
+
+width: 360px;
+height: 40px;
+
+padding: 14px 19px;
+margin-bottom: 8px;
+
+border-radius: 4px;
+border-color: var(--accent-clr);
+}
+
+.application-input textarea{
+    padding: 8px 16px;
+
+    height: 120px;
+}
+
+.application-input textarea::placeholder{
+    font-size: 12px;
+    line-height: 14px;
+    
+    letter-spacing: 0.04em;
+    
+    color: rgba(46, 47, 66, 0.4);
 }

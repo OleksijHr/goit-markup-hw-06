@@ -429,6 +429,18 @@
             </li>
           </ul>
         </div>
+        <div class="subscrabe">
+          <p class="subscrabe-text">Subscrabe</p>
+          <form action="">
+            <input
+              class="footer-input"
+              type="email"
+              name="mail"
+              placeholder="E-mail"
+            />
+            <button class="subscrabe-btn" type="button">Subscrabe</button>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -438,6 +450,39 @@
             <use href="./images/icons.svg#icon-close-black-18dp"></use>
           </svg>
         </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form class="application" action="">
+          <div class="application-input name">
+            <label class="application-lable" for="name">Name</label>
+            <input type="text" id="name" name="name" />
+          </div>
+
+          <div class="application-input tel">
+            <label class="application-lable" for="tel">Phone</label>
+            <input type="tel" id="tel" name="tel" />
+          </div>
+
+          <div class="application-input email">
+            <label class="application-lable" for="email">E-mail</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="application-input comment">
+            <label class="application-lable" for="comment">Comment</label>
+            <textarea
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="application-input policity">
+            <input type="checkbox" id="policity" name="policity" />I accept the
+            terms and conditions of the <a href="">Privacy Policy</a>
+            <label class="application-policity" for="policity"></label>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
