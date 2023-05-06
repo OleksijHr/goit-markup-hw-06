@@ -1034,11 +1034,23 @@ img {
             color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.input-icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
 .application-input:focus + .application-lable-comment,
 .application-input:not(:placeholder-shown) + .application-lable-comment {
     transform: translate( 1px, -16px);
     color: var(--primary-brand-clr);
 }
+
+.application-input:focus+.input-icon{
+    fill: var(--primary-brand-clr);
+}
+
 
 .application-field textarea{
     padding: 8px 16px;
