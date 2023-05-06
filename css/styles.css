@@ -977,7 +977,7 @@ img {
 
 .application-input{
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 23px;
     font: inherit;
     
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -985,7 +985,7 @@ img {
 }
 
 .application-input:hover, .application-input:focus{
-    border: 1px solid var(--primary-brand-clr);
+    border-color: var(--primary-brand-clr);
 }
 
 .application-lable{
@@ -1047,7 +1047,7 @@ img {
     color: var(--primary-brand-clr);
 }
 
-.application-input:focus+.input-icon{
+.application-input:hover~.input-icon, .application-input:focus~.input-icon{
     fill: var(--primary-brand-clr);
 }
 
