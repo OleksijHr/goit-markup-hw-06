@@ -1086,7 +1086,7 @@ img {
 .checkbox-policity:checked + .check-icon{
     border-color: var(--primary-focus-hover-clr);
     background-color: var(--primary-focus-hover-clr);
-    background-image: url('../images/check.svg');
+    background-image: url('../images/check-mark.svg');
     background-size: contain;
     background-origin: content-box;
 }
