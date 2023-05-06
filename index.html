@@ -452,34 +452,49 @@
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
         <form class="application" action="">
-          <div class="application-input name">
+          <div class="application-field name">
+            <input
+              type="text"
+              class="application-input"
+              id="name"
+              name="name"
+            />
             <label class="application-lable" for="name">Name</label>
-            <input type="text" id="name" name="name" />
           </div>
 
-          <div class="application-input tel">
+          <div class="application-field tel">
+            <input type="tel" class="application-input" id="tel" name="tel" />
             <label class="application-lable" for="tel">Phone</label>
-            <input type="tel" id="tel" name="tel" />
           </div>
 
-          <div class="application-input email">
+          <div class="application-field email">
+            <input
+              type="email"
+              class="application-input"
+              id="email"
+              name="email"
+            />
             <label class="application-lable" for="email">E-mail</label>
-            <input type="email" id="email" name="email" />
           </div>
 
-          <div class="application-input comment">
-            <label class="application-lable" for="comment">Comment</label>
+          <div class="application-field comment">
             <textarea
               name="comment"
               id="comment"
               rows="10"
               placeholder="Text input"
             ></textarea>
+            <label class="application-lable" for="comment">Comment</label>
           </div>
 
-          <div class="application-input policity">
-            <input type="checkbox" id="policity" name="policity" />I accept the
-            terms and conditions of the <a href="">Privacy Policy</a>
+          <div class="application-field policity">
+            <input
+              class="checkbox-policity hidden"
+              type="checkbox"
+              id="policity"
+              name="policity"
+            />I accept the terms and conditions of the
+            <a href="">Privacy Policy</a>
             <label class="application-policity" for="policity"></label>
           </div>
         </form>
