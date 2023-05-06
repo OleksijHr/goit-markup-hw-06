@@ -451,19 +451,26 @@
           </svg>
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
-        <form class="application" action="">
+        <form class="application" autocomplete="off">
           <div class="application-field name">
             <input
               type="text"
               class="application-input"
               id="name"
               name="name"
+              placeholder=" "
             />
             <label class="application-lable" for="name">Name</label>
           </div>
 
           <div class="application-field tel">
-            <input type="tel" class="application-input" id="tel" name="tel" />
+            <input
+              type="tel"
+              class="application-input"
+              id="tel"
+              name="tel"
+              placeholder=" "
+            />
             <label class="application-lable" for="tel">Phone</label>
           </div>
 
@@ -473,18 +480,22 @@
               class="application-input"
               id="email"
               name="email"
+              placeholder=" "
             />
             <label class="application-lable" for="email">E-mail</label>
           </div>
 
-          <div class="application-field comment">
+          <div class="application-field">
             <textarea
+              class="application-input"
               name="comment"
               id="comment"
               rows="10"
-              placeholder="Text input"
+              placeholder=" "
             ></textarea>
-            <label class="application-lable" for="comment">Comment</label>
+            <label class="application-lable-comment" for="comment"
+              >Comment</label
+            >
           </div>
 
           <div class="application-field policity">
