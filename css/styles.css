@@ -977,7 +977,8 @@ img {
 
 .application-input{
     margin: 0;
-    padding: 10px 23px;
+    padding: 10px 20px;
+    padding-left: 30px;
     font: inherit;
     
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1067,10 +1068,30 @@ img {
     color: rgba(46, 47, 66, 0.4);
 }
 
-.checkbox-policity{
+.application-policity{
+    display: flex;
+    align-items: center;
 }
 
-.hidden {
+.check-icon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+}
+
+.checkbox-policity:checked + .check-icon{
+    border-color: var(--primary-focus-hover-clr);
+    background-color: var(--primary-focus-hover-clr);
+    background-image: url('../images/check.svg');
+    background-size: contain;
+    background-origin: content-box;
+}
+
+.checkbox-policity.hidden {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
