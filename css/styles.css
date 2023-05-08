@@ -373,6 +373,7 @@ img {
 
     padding: 8px 16px;
 
+    color: var(--primary-inverted-text-clr);
     border: 1px solid var(--primary-inverted-bg-clr);
     border-radius: 4px;
 
@@ -405,25 +406,14 @@ img {
     background-color: var(--primary-focus-hover-clr);
 }
 
-.subscrabe-btn::after{
-    content: '';
-    display: block;
+.subscrabe-icon{
     margin-left: 16px;
 
-    width: 24px;
-    height: 20px;
-    background-image: url('../images/icons.svg#icon-telegram');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    fill: var(--primary-inverted-bg-clr);
 }
 
 
 /* Hero */
-.hero {
-    padding-top: 188px;
-    padding-bottom: 188px;
-}
 
 .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -433,6 +423,9 @@ img {
     background-size: cover;
 
     max-width: 1440px;
+    height: 600px;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
@@ -914,7 +907,7 @@ img {
     transform: scale(1) translate(-50%, -50%);
 
     width: 408px;
-    height: 576px;
+    height: 584px;
 
 
     background: var(--modal-bg-clr);
@@ -975,6 +968,10 @@ img {
     margin-bottom: 25px;
 }
 
+.application-field.textarea{
+    margin-bottom: 16px;
+}
+
 .application-input{
     margin: 0;
     padding: 10px 20px;
@@ -983,6 +980,8 @@ img {
     
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .application-input:hover, .application-input:focus{
@@ -992,10 +991,8 @@ img {
 .application-lable{
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 35px;
     transform: translateY(-50%);
-
-    margin-bottom: 4px;
 
     font-size: 12px;
     line-height: 14px;
@@ -1038,14 +1035,18 @@ img {
 .input-icon{
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 16px;
     transform: translateY(-50%);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .application-input:focus + .application-lable-comment,
 .application-input:not(:placeholder-shown) + .application-lable-comment {
     transform: translate( 1px, -16px);
     color: var(--primary-brand-clr);
+
+    
 }
 
 .application-input:hover~.input-icon, .application-input:focus~.input-icon{
@@ -1071,6 +1072,35 @@ img {
 .application-policity{
     display: flex;
     align-items: center;
+
+    margin-right: 5px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    
+    letter-spacing: 0.04em;
+
+    color: var(--subtle-text-clr);
+}
+
+.policity-link{
+    margin-left: 4px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    
+    letter-spacing: 0.04em;
+
+    color: var(--primary-brand-clr);
+}
+
+.application-field.policity{
+    margin-bottom: 24px;
 }
 
 .check-icon{
@@ -1081,6 +1111,9 @@ img {
 
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-policity:checked + .check-icon{
@@ -1095,4 +1128,24 @@ img {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+}
+
+.application-btn{
+    display: block;
+
+    width: 169px;
+    height: 56px;
+
+    border: none;
+    color: var(--primary-inverted-text-clr);
+    background-color: var(--primary-brand-clr);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: var(--primary-border-radius);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-btn:hover, .application-btn:focus{
+    background-color: var(--primary-focus-hover-clr);
 }
