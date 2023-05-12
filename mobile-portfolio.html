@@ -15,43 +15,96 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile-styles.css" />
   </head>
   <body>
+    <!-- header -->
     <header class="page-header">
       <div class="container">
-        <nav class="page-nav">
-          <a class="header-logo link" href="./index.html"
-            >Web<span class="header-web-logo">Studio</span></a
-          >
-          <ul class="menu list">
-            <li class="menu-item">
-              <a class="menu-link link" href="./index.html">Studio</a>
-            </li>
-            <li class="menu-item">
-              <a class="menu-link link current" href="./portfolio.html"
-                >Portfolio</a
-              >
-            </li>
-            <li class="menu-item">
-              <a class="menu-link link" href="">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address">
-          <ul class="address-list list">
-            <li class="address-item">
-              <a class="contact link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="address-item">
-              <a class="contact link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <div class="menu-container">
+          <nav class="page-nav">
+            <a class="header-logo link" href="./index.html"
+              >Web<span class="header-web-logo">Studio</span></a
+            >
+            <button
+              class="menu-button is-open"
+              aria-expanded="false"
+              type="button"
+            >
+              <svg width="32px" height="32px" aria-label="Mobile menu switch">
+                <use
+                  class="icon-cross .js-close-menu"
+                  href="./images/icons.svg#icon-close-black-18dp"
+                ></use>
+                <use
+                  class="icon-menu .js-open-menu"
+                  href="./images/icons.svg#icon-menu"
+                ></use>
+              </svg>
+            </button>
+            <div class="menu-container-is-hedden js-menu-container">
+              <ul class="menu list">
+                <li class="menu-item">
+                  <a class="menu-link link current" href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link link" href="./portfolio.html"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="menu-item">
+                  <a class="menu-link link" href="">Contacts</a>
+                </li>
+              </ul>
+              <address class="address">
+                <ul class="address-list list">
+                  <li class="address-item">
+                    <a class="contact link" href="tel:+110001111111"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li class="address-item">
+                    <a class="contact link" href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="social-link-list list">
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social-link-item item">
+                    <a class="link" href="">
+                      <svg class="social-link" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
@@ -370,5 +423,91 @@
         </div>
       </div>
     </footer>
+    <!-- Backdrop -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" data-modal-close type="button">
+          <svg class="close-btn" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-18dp"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+
+        <form class="application" autocomplete="off">
+          <div class="application-field name">
+            <input
+              type="text"
+              class="application-input"
+              id="name"
+              name="name"
+              placeholder=" "
+            />
+            <label class="application-lable" for="name">Name</label>
+            <svg class="input-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+
+          <div class="application-field tel">
+            <input
+              type="tel"
+              class="application-input"
+              id="tel"
+              name="tel"
+              placeholder=" "
+            />
+            <label class="application-lable" for="tel">Phone</label>
+            <svg class="input-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-telephone"></use>
+            </svg>
+          </div>
+
+          <div class="application-field email">
+            <input
+              type="email"
+              class="application-input"
+              id="email"
+              name="email"
+              placeholder=" "
+            />
+            <label class="application-lable" for="email">E-mail</label>
+            <svg class="input-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-letter"></use>
+            </svg>
+          </div>
+
+          <div class="application-field textarea">
+            <textarea
+              class="application-input"
+              name="comment"
+              id="comment"
+              rows="10"
+              placeholder=" "
+              style="resize: none"
+            ></textarea>
+            <label class="application-lable-comment" for="comment"
+              >Comment</label
+            >
+          </div>
+
+          <div class="application-field policity">
+            <label class="application-policity">
+              <input
+                class="checkbox-policity hidden"
+                type="checkbox"
+                name="policity"
+                value="check"
+              />
+              <span class="check-icon"></span>
+              I accept the terms and conditions of the
+              <a class="policity-link" href="">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="application-btn centered" type="button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
